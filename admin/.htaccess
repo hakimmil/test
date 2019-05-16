@@ -1,0 +1,46 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+#php_value display_errors 1
+
+RewriteRule ^masuk$ 						masuk.php [L]
+
+
+RewriteRule ^admin$                 		home.php?module=resume [L]
+
+
+RewriteRule ^resume$                		home.php?module=resume [L]
+RewriteRule ^tambah_kemampuan$      		home.php?module=tambah_kemampuan [L]
+RewriteRule ^edit_kemampuan-(.*)$   		home.php?module=edit_kemampuan&id_kemampuan=$1 [L]
+RewriteRule ^hapus_kemampuan-(.*)$  		home.php?module=hapus_kemampuan&id_kemampuan=$1 [L]
+
+RewriteRule ^tambah_pendidikan$      		home.php?module=tambah_pendidikan [L]
+RewriteRule ^edit_pendidikan-(.*)$   		home.php?module=edit_pendidikan&id_pendidikan=$1 [L]
+RewriteRule ^hapus_pendidikan-(.*)$  		home.php?module=hapus_pendidikan&id_pendidikan=$1 [L]
+
+RewriteRule ^tambah_pengalaman$      		home.php?module=tambah_pengalaman [L]
+RewriteRule ^edit_pengalaman-(.*)$   		home.php?module=edit_pengalaman&id_pengalaman=$1 [L]
+RewriteRule ^hapus_pengalaman-(.*)$  		home.php?module=hapus_pengalaman&id_pengalaman=$1 [L]
+
+RewriteRule ^portofolio$            		home.php?module=portofolio [L]
+RewriteRule ^tambah_portofolio$      		home.php?module=tambah_portofolio [L]
+RewriteRule ^edit_portofolio-(.*)$   		home.php?module=edit_portofolio&id_portofolio=$1 [L]
+RewriteRule ^hapus_portofolio-(.*)$  		home.php?module=hapus_portofolio&id_portofolio=$1 [L]
+
+
+RewriteRule ^services$              		home.php?module=services [L]
+RewriteRule ^tambah_services$      			home.php?module=tambah_services [L]
+RewriteRule ^edit_services-(.*)$   			home.php?module=edit_services&id_services=$1 [L]
+RewriteRule ^hapus_services-(.*)$  			home.php?module=hapus_services&id_services=$1 [L]
+
+
+RewriteRule ^sosmed$               			home.php?module=sosmed [L]
+RewriteRule ^tambah_sosmed$      			home.php?module=tambah_sosmed [L]
+RewriteRule ^edit_sosmed-(.*)$   			home.php?module=edit_sosmed&id_sosmed=$1 [L]
+RewriteRule ^hapus_sosmed-(.*)$  			home.php?module=hapus_sosmed&id_sosmed=$1 [L]
+
+RewriteRule ^logout$                		logout.php [L]
+
+ErrorDocument 404 /404/404.html
+Options All -Indexes
+
